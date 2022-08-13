@@ -1,4 +1,4 @@
-# Telnyx Ctpress 
+# Telnyx Cypress 
 
 
 ## 1. Install 
