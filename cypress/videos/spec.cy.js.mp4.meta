@@ -1,0 +1,51 @@
+;FFMETADATA1
+[CHAPTER]
+TIMEBASE=1/1000
+START=-15263
+END=31383
+title=Smoke test Verify  that favicon "Telnyx" is working properly to return to the main  from other pages 
+[CHAPTER]
+TIMEBASE=1/1000
+START=70534
+END=78046
+title=Smoke test Check main header navigation menu is present on "Products", "Solutions", "Pricing" pages 
+[CHAPTER]
+TIMEBASE=1/1000
+START=78621
+END=85586
+title=Smoke test Check visability pop up submenu of main navigation menu
+[CHAPTER]
+TIMEBASE=1/1000
+START=88554
+END=92566
+title=Smoke test Check input field is focused after click on it
+[CHAPTER]
+TIMEBASE=1/1000
+START=86369
+END=96590
+title=Smoke test Unable to go to the account creation page with the wrong email on "Try for free" label
+[CHAPTER]
+TIMEBASE=1/1000
+START=95781
+END=106822
+title=Smoke test Verify redirection to account creation page with filled email 
+[CHAPTER]
+TIMEBASE=1/1000
+START=101510
+END=117881
+title=Smoke test Verify that email can be cleared from "Email" input field
+[CHAPTER]
+TIMEBASE=1/1000
+START=127878
+END=134266
+title=Smoke test Verify cocial link in footer menu "Linked In" works properly
+[CHAPTER]
+TIMEBASE=1/1000
+START=132230
+END=140669
+title=Smoke test Verify cocial link in footer menu "Follow on Twitter" works properly
+[CHAPTER]
+TIMEBASE=1/1000
+START=141825
+END=149135
+title=Smoke test Verify cocial link in footer menu "Follow on Facebook" works properly

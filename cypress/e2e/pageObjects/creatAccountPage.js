@@ -7,6 +7,10 @@ const  correctEmail = 'qwerty@gmail.com'
 
 class CreatAccountPage {
 
+//URL
+
+urlCreateAccountPage() {cy.visit('https://telnyx.com/sign-up?email=qwerty@gmail.com')}
+
 //get Element
 emailInputField() {return basic.xpathFindElement(emailInputField)}
 

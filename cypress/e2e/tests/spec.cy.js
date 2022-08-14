@@ -96,23 +96,26 @@ describe("Smoke test", () => {
       mainPage.checkUrlMainPage()
 
   })
-  it('Verify redirection to account creation page with filled email and Verify that email can be cleared from "Email" input field', () => {
+  it('Verify redirection to account creation page with filled email ', () => {
       mainPage.typeIntoCorectEmailInputField()
       mainPage.clickTryforFreeBtn()
       mainPage.checkUrlCreatFreeAccount()
-      creatAccountPage.checkCorrectEmailIntoEmailField()
-      creatAccountPage.clearValueEmailInputField()
-      creatAccountPage.emailInputField().should('have.value', '')
 
-
-
-    
       //cy.xpath('//*[@type="email"]').click().type('qwerty@gmail.com')
       //cy.xpath('//*[@type="submit"]').click()
       //cy.url().should('eq', 'https://telnyx.com/sign-up?email=qwerty@gmail.com')
-      //cy.xpath('//*[@id="email"]').should('have.value','qwerty@gmail.com')
+    }) 
+  it ('Verify that email can be cleared from "Email" input field', () =>{   
+      
+      creatAccountPage.urlCreateAccountPage()
+      creatAccountPage.checkCorrectEmailIntoEmailField()
+      creatAccountPage.clearValueEmailInputField()
+      creatAccountPage.emailInputField().should('have.value', '')
+    
+
      
-      //cy.xpath('//*[@id="email"]').clear()
+      //cy.xpath('//*[@id="email"]').should('have.value','qwerty@gmail.com')
+     //cy.xpath('//*[@id="email"]').clear()
       //cy.xpath('//*[@id="email"]').should('have.value', '')
     })
     it('Verify cocial link in footer menu "Linked In" works properly', () => {
