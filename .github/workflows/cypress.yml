@@ -1,4 +1,4 @@
-name: Telnyx Main
+name: Telnyx_cypress Main
 on:
   push:
     branches: [ main, master ]
