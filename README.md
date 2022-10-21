@@ -4,7 +4,7 @@
 ## 1. Install 
 in terminal enter
 ```
-git clone https://github.com/ValeriiMandryka/playwrite.git
+https://github.com/ValeriiMandryka/Telnyx-project-on-Cypress.git
 npm ci 
 ```
 ## 2. Run tests
