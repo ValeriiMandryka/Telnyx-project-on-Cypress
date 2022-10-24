@@ -1,4 +1,4 @@
-const basic = require("./basic");
+const Basic = require("./Basic");
 
 //data
 const  incorrectEmail = 'qwertygmail.com'
@@ -6,15 +6,9 @@ const  correctEmail = 'qwerty@gmail.com'
 
 const faviconTelnyx = '[data-name="Layer 1"]'
 const networkLinkHeader = 'span [href="/solutions/global-ip-network"]'
-const UrlNetworkLink = 'https://telnyx.com/solutions/global-ip-network'
-const UrlMainPage = 'https://telnyx.com/'
-const urlCeatFreeAccaunt = 'https://telnyx.com/sign-up?email=qwerty@gmail.com'
-const LinkedInURL = 'https://www.linkedin.com/company/telnyx/'
-const TwitterURL = 'https://twitter.com/telnyx'
-const FacebookURL = 'https://www.facebook.com/Telnyx/'
-const linkedInLink = '[href="https://www.linkedin.com/company/telnyx/"]'
-const TwitterLink = '[href="https://twitter.com/telnyx"]'
 const FaceboolLink = '[href="https://www.facebook.com/Telnyx/"]'
+const TwitterLink = '[href="https://twitter.com/telnyx"]'
+const linkedInLink = '[href="https://www.linkedin.com/company/telnyx/"]'
 const linkSeeAllProducts = '(//*[@href="/products"])[1]'
 const headerNavBar = '(//*[@id="__next"]//descendant::header)[1]'
 const linkSeeAllSolutions = '//*[@href="/solutions"]'
@@ -25,59 +19,69 @@ const resourcesButton = '(//*[@id="__next"]/descendant::span[@class="sc-7b3980dc
 const companyButton = '(//*[@id="__next"]/descendant::span[@class="sc-7b3980dc-6 gdETaM"])[5]'
 const picingButton = '(//*[@id="__next"]/descendant::span[@class="sc-7b3980dc-6 gdETaM"])[6]'
 
-const popUpMenuOfProducts = '(//*[@class="sc-9d98fd33-0 sc-7b3980dc-3 bRlGsp ftReEQ"])[1]'
-const popUpMenuOfSolution = '(//*[@class="sc-9d98fd33-0 sc-7b3980dc-3 bRlGsp ftReEQ"])[2]'
-const popUpMenuOfResources = '(//*[@class="sc-9d98fd33-0 sc-7b3980dc-3 bRlGsp ftReEQ"])[3]'
-const popUpMenuOfCompany = '(//*[@class="sc-9d98fd33-0 sc-7b3980dc-3 bRlGsp ftReEQ"])[4]'
-const popUpMenuOfPricing = '(//*[@class="sc-9d98fd33-0 sc-7b3980dc-3 bRlGsp ftReEQ"])[5]'
+const popUpMenuOfProducts = '(//*[@class="sc-14c941d7-0 sc-7b3980dc-3 jGccVu ftReEQ"])[1]'
+const popUpMenuOfSolution = '(//*[@class="sc-14c941d7-0 sc-7b3980dc-3 jGccVu ftReEQ"])[2]'
+const popUpMenuOfResources = '(//*[@class="sc-14c941d7-0 sc-7b3980dc-3 jGccVu ftReEQ"])[3]'
+const popUpMenuOfCompany = '(//*[@class="sc-14c941d7-0 sc-7b3980dc-3 jGccVu ftReEQ"])[4]'
+const popUpMenuOfPricing = '(//*[@class="sc-14c941d7-0 sc-7b3980dc-3 jGccVu ftReEQ"])[5]'
 const emailInputField = '//*[@type="email"]'
 const tryForFreeBtn = '//*[@type="submit"]'
 
+class MainPage extends Basic {
+//class MainPage  {
 
-class MainPage  {
+    elements={
+        FaviconTelnyx: () => cy.get(faviconTelnyx),
+        HeaderNavBar:() => cy.xpath(headerNavBar),
+        PopUpMenuOfProducts:() => cy.xpath(popUpMenuOfProducts),
+        PopUpMenuOfSolution:() => cy.xpath(popUpMenuOfSolution),
+        PopUpMenuOfResources:() => cy.xpath(popUpMenuOfResources),
+        PopUpMenuOfCompany:() => cy.xpath(popUpMenuOfCompany),
+        PopUpMenuOfPricing:() => cy.xpath(popUpMenuOfPricing),
+        EmailInputField:() => cy.xpath(emailInputField),
+        
+    }
 
  //visability
-checkVisabilityPopUpMenuOfPoducts() {basic.elementXpathIsVisible(popUpMenuOfProducts)}
-checkVisabilityPopUpMenuOfSolutions() {basic.elementXpathIsVisible(popUpMenuOfSolution)}
-checkVisabilityPopUpMenuOfResources() {basic.elementXpathIsVisible(popUpMenuOfResources)}
-checkVisabilityPopUpMenuOfCompany() {basic.elementXpathIsVisible(popUpMenuOfCompany)}
-checkVisabilityPopUpMenuOfPricing() {basic.elementXpathIsVisible(popUpMenuOfPricing)}
-shouldBeVisibleFavicon() {basic.elementCssIsVisible(faviconTelnyx)}
-checkVisabilityHeaderNavBar() {basic.elementXpathIsVisible(headerNavBar)}
+
+checkVisabilityPopUpMenuOfPricing() {super.elementXpathIsVisible(popUpMenuOfPricing)}
+shouldBeVisibleFavicon() {super.elementCssIsVisible(faviconTelnyx)}
+checkVisabilityHeaderNavBar() {super.elementXpathIsVisible(headerNavBar)}
 //click
-clickNetworkLinkHeader() {basic.clickCssElement(networkLinkHeader)}   
-clickFaviconTelnyx() { basic.clickCssElement(faviconTelnyx)}
-clickForceLinkSeeallProducts() {basic.clickForceXpathElement(linkSeeAllProducts)}
-clickForceLinkSeeallSolutions() {basic.clickForceXpathElement(linkSeeAllSolutions)}
-clickForceLinkSeeallPricing() {basic.clickForceXpathElement(linkSeeAllPricing)}
-clickTryforFreeBtn() {basic.clickForceXpathElement(tryForFreeBtn)}
-clickLinkedInLinkWithoutAttribut() {basic.clickWithoutAttribut(linkedInLink, 'target' )}
-clickTwitterWithoutAttribut() {basic.clickWithoutAttribut(TwitterLink, 'target' )}
-clickFacbookLinkWithoutAttribut() {basic.clickWithoutAttribut(FaceboolLink, 'target' )}
+clickNetworkLinkHeader() {super.clickCssElement(networkLinkHeader)}   
+clickFaviconTelnyx() { super.clickCssElement(faviconTelnyx)}
+clickForceLinkSeeallProducts() {super.clickForceXpathElement(linkSeeAllProducts)}
+clickForceLinkSeeallSolutions() {super.clickForceXpathElement(linkSeeAllSolutions)}
+clickForceLinkSeeallPricing() {super.clickForceXpathElement(linkSeeAllPricing)}
+clickTryforFreeBtn() {super.clickForceXpathElement(tryForFreeBtn)}
+clickLinkedInLinkWithoutAttribut() {super.clickWithoutAttribut(linkedInLink, 'target' )}
+clickTwitterWithoutAttribut() {super.clickWithoutAttribut(TwitterLink, 'target' )}
+clickFacbookLinkWithoutAttribut() {super.clickWithoutAttribut(FaceboolLink, 'target' )}
+clickEmailInputField() {super.clickForceXpathElement(emailInputField)}
 
 //hover
-hoverToProductsButton() {basic.hoverXpathElement(productsButton)}
-hoverToSolutionsButton() {basic.hoverXpathElement(solutionsButton)}
-hoverToResourcesButton() {basic.hoverXpathElement(resourcesButton)}
-hoverToCompanyButton() {basic.hoverXpathElement(companyButton)}
-hoverToPricingButton() {basic.hoverXpathElement(picingButton)}
+hoverToProductsButton() {super.hoverXpathElement(productsButton)}
+hoverToSolutionsButton() {super.hoverXpathElement(solutionsButton)}
+hoverToResourcesButton() {super.hoverXpathElement(resourcesButton)}
+hoverToCompanyButton() {super.hoverXpathElement(companyButton)}
+hoverToPricingButton() {super.hoverXpathElement(picingButton)}
 
 //checkUrl
-checkUrlNetworkLink() {basic.checkUrl(UrlNetworkLink)}
-checkUrlMainPage() {basic.checkUrl(UrlMainPage)}
-checkUrlCreatFreeAccount() {basic.checkUrl(urlCeatFreeAccaunt)}
-checkLinkedInUrl() {basic.checkUrl(LinkedInURL)}
-checkTwitterUrl() {basic.checkUrl(TwitterURL)}
-checkFacebookUrl() {basic.checkUrl(FacebookURL)}
+checkUrlNetworkLink() {super.checkUrl(UrlNetworkLink)}
+//checkUrlMainPage() {super.checkUrl(UrlMainPage)}
+//checkUrlCreatFreeAccount() {super.checkUrl(urlCeatFreeAccaunt)}
+//checkLinkedInUrl() {super.checkUrl(LinkedInURL)}
+//checkTwitterUrl() {super.checkUrl(TwitterURL)}
+//checkFacebookUrl() {super.checkUrl(FacebookURL)}
 //checkIsFocused
-checkIsFocusedEmailInputFieldd() {basic.checkIsFocused(emailInputField)}
+//checkIsFocusedEmailInputFieldd() {super.checkIsFocused(emailInputField)}
 
 //scrollIntoView
-scrollIntoViewEmailInputField() {basic.scrollIntoView(emailInputField)}
+scrollIntoViewEmailInputField() {super.scrollIntoView(emailInputField)}
 
 //type
-typeIntoIncorectEmailInputField() {basic.typeXpathElement(emailInputField,incorrectEmail)}
-typeIntoCorectEmailInputField() {basic.typeXpathElement(emailInputField,correctEmail)}
+typeIncorectEmail() {super.typeXpathElement(emailInputField,incorrectEmail)}
+typeIntoCorectEmailInputField() {super.typeXpathElement(emailInputField,correctEmail)}
 
 
 

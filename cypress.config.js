@@ -7,7 +7,8 @@ module.exports = defineConfig({
       
       // implement node event listeners here
       
-    },   
+    },  
+    retries: 2,
     viewportWidth: 1920,
     viewportHeight: 1080,
     supportFile: 'cypress/support/index.js',

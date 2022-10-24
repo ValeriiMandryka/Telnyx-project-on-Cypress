@@ -1,21 +1,16 @@
-const basic = require("./basic")
-const mainPage = require("./mainPage")
+const Basic = require("./Basic")
+
 
 const emailInputField = '//*[@id="email"]'
 const  correctEmail = 'qwerty@gmail.com'
 
+class CreatAccountPage extends Basic{
 
-class CreatAccountPage {
+elements = {
+    EmailInputField: () => cy.xpath(emailInputField)
+}
 
-//URL
-
-urlCreateAccountPage() {cy.visit('https://telnyx.com/sign-up?email=qwerty@gmail.com')}
-
-//get Element
-emailInputField() {return basic.xpathFindElement(emailInputField)}
-
-checkCorrectEmailIntoEmailField() {basic.checkValue(emailInputField,correctEmail)}
-clearValueEmailInputField() {basic.clearValue(emailInputField)}
+clearValueEmailInputField() {super.clearValue(emailInputField)}
 
 }
 
