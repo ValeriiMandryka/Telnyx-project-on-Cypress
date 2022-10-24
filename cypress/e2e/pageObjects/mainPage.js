@@ -1,4 +1,4 @@
-const Basic = require("./Basic");
+const Basic = require("./basic");
 
 //data
 const  incorrectEmail = 'qwertygmail.com'

@@ -1,4 +1,4 @@
-const Basic = require("./Basic")
+const Basic = require("./basic")
 
 
 const emailInputField = '//*[@id="email"]'
