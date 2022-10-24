@@ -1,14 +1,14 @@
 
 /// <reference types="cypress" />
 
-const basic = require("../pageObjects/basic");
+
 const creatAccountPage = require("../pageObjects/creatAccountPage");
 const mainPage = require("../pageObjects/mainPage");
 
 const mainUrl = 'https://telnyx.com'
 const sighnUpUrl = 'https://telnyx.com/sign-up?email=qwerty@gmail.com'
-const  correctEmail = 'qwerty@gmail.com'
-//const Element = 
+
+
 
 
 

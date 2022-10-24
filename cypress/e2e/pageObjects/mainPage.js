@@ -28,7 +28,7 @@ const emailInputField = '//*[@type="email"]'
 const tryForFreeBtn = '//*[@type="submit"]'
 
 class MainPage extends Basic {
-//class MainPage  {
+
 
     elements={
         FaviconTelnyx: () => cy.get(faviconTelnyx),
@@ -42,11 +42,7 @@ class MainPage extends Basic {
         
     }
 
- //visability
 
-checkVisabilityPopUpMenuOfPricing() {super.elementXpathIsVisible(popUpMenuOfPricing)}
-shouldBeVisibleFavicon() {super.elementCssIsVisible(faviconTelnyx)}
-checkVisabilityHeaderNavBar() {super.elementXpathIsVisible(headerNavBar)}
 //click
 clickNetworkLinkHeader() {super.clickCssElement(networkLinkHeader)}   
 clickFaviconTelnyx() { super.clickCssElement(faviconTelnyx)}
@@ -66,15 +62,7 @@ hoverToResourcesButton() {super.hoverXpathElement(resourcesButton)}
 hoverToCompanyButton() {super.hoverXpathElement(companyButton)}
 hoverToPricingButton() {super.hoverXpathElement(picingButton)}
 
-//checkUrl
-checkUrlNetworkLink() {super.checkUrl(UrlNetworkLink)}
-//checkUrlMainPage() {super.checkUrl(UrlMainPage)}
-//checkUrlCreatFreeAccount() {super.checkUrl(urlCeatFreeAccaunt)}
-//checkLinkedInUrl() {super.checkUrl(LinkedInURL)}
-//checkTwitterUrl() {super.checkUrl(TwitterURL)}
-//checkFacebookUrl() {super.checkUrl(FacebookURL)}
-//checkIsFocused
-//checkIsFocusedEmailInputFieldd() {super.checkIsFocused(emailInputField)}
+
 
 //scrollIntoView
 scrollIntoViewEmailInputField() {super.scrollIntoView(emailInputField)}

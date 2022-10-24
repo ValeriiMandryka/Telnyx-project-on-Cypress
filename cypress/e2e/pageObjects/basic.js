@@ -25,8 +25,6 @@ scrollIntoView(element) {this.xpathFindElement(element).scrollIntoView()}
 
 typeXpathElement(element,text) {this.xpathFindElement(element).click({force: true}).type(text)}
 checkIsFocused(element) {this.xpathFindElement(element).click({force: true}).should('be.focused')}
-//checkUrl(url) {cy.url().should('eq', (url))}
-checkValue(element,text) {this.xpathFindElement(element).should('have.value', text)}
 
 clearValue(element) {this.xpathFindElement(element).clear()}
 

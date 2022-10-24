@@ -2,7 +2,7 @@ const Basic = require("./Basic")
 
 
 const emailInputField = '//*[@id="email"]'
-const  correctEmail = 'qwerty@gmail.com'
+
 
 class CreatAccountPage extends Basic{
 
